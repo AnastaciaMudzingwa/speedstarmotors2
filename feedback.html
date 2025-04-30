@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Speedstar Motors | Home</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body> 
+<header>
+    <nav>
+        <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="contactus.html">Contact us</a></li>
+            <li><a href="aboutus.html">About us</a></li>
+            <li><a href="services.html">Services</a></li>
+            <li><a href="feedback.html">Feedback</a></li>
+            <li><a href="products.html">Products</a></li>
+        </ul>
+    </nav>
+</header>
+<section class="feedback-container">
+  <aside>
+    <h2>"We value your feedback! At SpeedStar Motors, customer satisfaction is our top priority. Whether you recently purchased a vehicle, had a service appointment, or simply visited our showroom, we’d love to hear about your experience. Your insights help us improve and continue providing top-quality vehicles and exceptional service. Please take a moment to share your thoughts with us. Thank you for being a valued part of the SpeedStar Motors family!"</h2>
+    <form  action onsubmit="return validateForm()">
+        <input type="text" placeholder="Your Name" required>
+        <input type="email" placeholder="Your E-mail" required>
+        <textarea name="" placeholder="Share Your Thoughts.." id=""></textarea>
+        <button type="submit">Send Feedback</button>
+       <script>
+        function validateForm() {
+            let isValid = true;
+            //Get form inputs
+            let name = document.getElementById("name").value.trim();
+            let email = document.getElementById("email").value.trim();
+            let feedback = document.getElementById("feedback").value.trim();
+            //Get error elements
+            let nameError = document.getElementById("nameError");
+            let emailError = document.getElementById("emailError");
+            let feedbackError = document.getElementById("feedbackError");
+            //Reset error messages
+            nameError.textContent="";
+            emailError.textContent="";
+            feedbackError.textcontent="";
+            //Validate Name (Minimum 3 characters)
+            if (name.length <3) {
+                nameError.textContent = "Name must be atleat 3 chaeacters long.";
+                isValid = false;
+            }
+            //Validate Email (Basic pattern check)
+            let emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+            if (!emailPttern.test(email)) {
+                emailError.textContent = "Enter a valid email address.";
+                isValid = false;
+            }
+            //Validate Feedback (Minimum 10 characters)
+            if (feedback.length < 10) {
+                feedbackError.textContent = "Feedback must be at least 10 characters long.";
+                isValid = false;
+            }
+
+            return isValid;
+        }
+       </script> 
+    </form>
+  </aside>  
+</section>
+<footer>
+    <p>&copy;2025 Speedstar Motors. All rights reserved</p>
+</footer>
+</body>
+</html> 
