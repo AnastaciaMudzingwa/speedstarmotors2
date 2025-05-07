@@ -203,3 +203,59 @@ th {
 tr:nth-child(even) {
     background-color: #f9f9f9;
 }
+@media screen and(max-width:768px)
+{
+    header{
+        width: 100%;
+        padding: 15px;
+        flex-direction: column;
+    }
+    nav ul li{
+        display: block;
+        margin: 8px 0;
+    }
+    .sidebar{
+        padding: 10px;
+        width: 100%;
+
+    }
+    .about-content{
+        padding: 10px;
+        flex-basis: 100%;
+        order: -1;
+        width: 100%;
+
+    }
+    .about-container{
+        padding: 10px;
+        flex-wrap: wrap;
+        
+
+    }
+    footer{
+        padding: 15px;
+
+    }
+
+}
+@media screen and(max-width:480px)
+{
+    header{
+        width: 100%;
+        flex-direction: column;
+
+    }
+    nav ul li{
+        display: block;
+        margin: 8px 0;
+    }
+    .sidebar{
+        min-width: auto;
+    }
+    
+    .about-container{
+        flex-direction: column;
+        
+    }
+    
+}
